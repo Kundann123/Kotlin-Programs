@@ -10,8 +10,8 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.auth.*
-import io.ktor.server.auth.JWT
-import io.ktor.server.auth.jwt.*
+import io.ktor.server.auth.jwt.jwt
+import io.ktor.server.auth.jwt.JWTPrincipal
 import io.ktor.server.response.*
 
 fun Application.configureAuthentication(){

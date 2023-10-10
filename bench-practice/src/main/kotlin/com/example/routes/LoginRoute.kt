@@ -16,14 +16,14 @@ fun Application.configureLogin(){
     val loginService by kodein.instance<LoginService>()
     routing {
         route("/login"){
-            post("/signin") {
+            post("/signup") {
                 val body=call.receive<LoginDTO>()
                 call.respond(loginService.saveLoginData(body))
             }
 
-            post("/signup") {
+            post("/signin") {
                 val body=call.receive<LoginDTO>()
-                call.respond(loginService.signUp(body))
+                call.respond(loginService.signIn(body))
             }
         }
     }

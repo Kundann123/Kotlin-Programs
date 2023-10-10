@@ -13,7 +13,7 @@ class LoginServiceImpl : LoginService {
         return loginRepo.saveSignUpData(body)
     }
 
-    override suspend fun signUp(body: LoginDTO): Any {
+    override suspend fun signIn(body: LoginDTO): Any {
         return loginRepo.signIn(body)
     }
 
